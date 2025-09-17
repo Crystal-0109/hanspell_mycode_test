@@ -24,6 +24,7 @@ ALLOW_ORIGINS = [
     "http://localhost:5501",
     "https://hj-sp.github.io",
     "https://crystal-0109.github.io",
+    "https://hanspell-mycode-test.onrender.com",
 ]
 
 app.add_middleware(
