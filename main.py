@@ -20,7 +20,10 @@ ALLOW_ORIGINS = [
     "http://localhost:5500",
     "http://127.0.0.1:3000",
     "http://localhost:3000",
+    "http://127.0.0.1:5501",
+    "http://localhost:5501",
     "https://hj-sp.github.io",
+    "https://Crystal-0109.github.io",
 ]
 
 app.add_middleware(
