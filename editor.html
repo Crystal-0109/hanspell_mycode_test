@@ -7,10 +7,6 @@
         <meta name="description" content="" />
         <meta name="keywords" content="" />
 
-        <!-- Favicons -->
-        <link href="assets/img/favicon.png" rel="icon" />
-        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
-
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com" rel="preconnect" />
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
@@ -19,27 +15,6 @@
             rel="stylesheet"
         />
 
-        <!-- Vendor CSS Files -->
-        <link
-            href="assets/vendor/bootstrap/css/bootstrap.min.css"
-            rel="stylesheet"
-        />
-        <link
-            href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-            rel="stylesheet"
-        />
-        <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-        <link
-            href="assets/vendor/glightbox/css/glightbox.min.css"
-            rel="stylesheet"
-        />
-        <link
-            href="assets/vendor/swiper/swiper-bundle.min.css"
-            rel="stylesheet"
-        />
-
-        <!-- Main CSS File -->
-        <link href="assets/css/main.css" rel="stylesheet" />
         <!-- Quill -->
         <link
             href="https://cdn.jsdelivr.net/npm/quill@1.3.7/dist/quill.snow.css"
@@ -366,7 +341,13 @@
         <script src="https://cdn.jsdelivr.net/npm/quill@1.3.7/dist/quill.min.js"></script>
         <script>
             // ===== 0) 환경 =====
-            const BASE_URL = 'http://127.0.0.1:8000'; // ← 네 FastAPI 주소로 변경
+            // const BASE_URL = 'http://127.0.0.1:8000'; // ← 네 FastAPI 주소로 변경
+            const isLocal =
+                location.hostname === 'localhost' ||
+                location.hostname === '127.0.0.1';
+            const BASE_URL = isLocal
+                ? 'http://127.0.0.1:8000'
+                : 'https://hanspell-mycode-test.onrender.com';
             const $spinner = document.getElementById('spinner');
 
             // ===== 1) Quill 초기화 =====
