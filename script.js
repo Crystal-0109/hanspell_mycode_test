@@ -4,6 +4,8 @@ const BASE_URL = isLocal
     ? 'http://127.0.0.1:8000'
     : 'https://hanspell-mycode-test.onrender.com';
 
+console.log(BASE_URL);
+
 // DOMContentLoaded 이벤트를 사용하여 DOM이 완전히 로드된 이후에 document.getElementById로 요소를 찾도록 수정
 document.addEventListener('DOMContentLoaded', () => {
     // 버튼 클릭 이벤트 바인딩
